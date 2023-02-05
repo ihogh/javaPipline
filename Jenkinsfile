@@ -4,7 +4,12 @@ pipeline {
         stage('build') {
             steps {
                 sh 'mvn --version'
+            }            
+        }
+        stage('sys check') {
+            steps {
+                sh 'lscpu'
             }
         }
+    }    
     }
-}
